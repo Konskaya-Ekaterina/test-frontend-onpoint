@@ -1,0 +1,80 @@
+@import "./assets/fonts/Gilroy-font.css";
+@import "./assets/fonts/DINPro-font.css";
+@import "./assets/fonts/Circle-font.css";
+@import "./assets/styles/variables";
+
+html, body {
+  width: $app-width * 3;
+  height: $app-height;
+  position: fixed;
+  color: black;
+  font-size: 50px;
+  font-family: Gilroy, sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.App {
+  width: $app-width * 3;
+  height: $app-height;
+}
+
+.header {
+  $text-color-header: #272727;
+
+  position: absolute;
+  top: 27px;
+  left: 69px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1000;
+
+  &__image {
+    height: 20px;
+    display: block;
+    margin-top: -4px;
+    padding-right: 24px;
+  }
+
+  &__title {
+    padding: 5px 0 5px 25px;
+    color: $text-color-header;
+    font-family: Circe, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-left: 2px solid $text-color-header;
+  }
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 18px;
+  left: 72px;
+  z-index: 1000;
+
+  &__image {
+    height: 12px;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 165px 39px 187px 72px;
+}

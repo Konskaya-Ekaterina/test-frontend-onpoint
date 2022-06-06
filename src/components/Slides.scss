@@ -1,0 +1,11 @@
+@import "../assets/styles/variables";
+
+.slides {
+  display: flex;
+  align-items: flex-start;
+  background-image: url("../assets/images/background.png");
+  background-repeat: no-repeat;
+  background-size: $app-width * 3 $app-height;
+  background-position: 0 0;
+  transition: all 0.5s linear;
+}

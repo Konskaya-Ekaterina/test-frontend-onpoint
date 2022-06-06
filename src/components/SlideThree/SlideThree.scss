@@ -1,0 +1,219 @@
+@import "../../assets/styles/variables";
+
+.slide-three {
+  width: 1024px;
+  height: 768px;
+  position: relative;
+  color: $black-color-main;
+  font-family: "DIN Pro", sans-serif;
+  font-size: 24px;
+  z-index: 10;
+
+  &__images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6000;
+  }
+
+  &__image {
+    position: absolute;
+    z-index: 0;
+    animation: bubbles infinite linear;
+
+    &:nth-child(1) {
+      width: 62px;
+      top: 593px;
+      left: 245px;
+      animation-duration: 6s;
+    }
+
+    &:nth-child(2) {
+      width: 143px;
+      top: 705px;
+      left: 186px;
+      z-index: 5000;
+      animation-duration: 7s;
+      animation-direction: reverse;
+    }
+
+    &:nth-child(3) {
+      width: 68px;
+      top: 156px;
+      left: 187px;
+      z-index: 5000;
+      animation-duration: 5s;
+      animation-direction: reverse;
+    }
+
+    &:nth-child(4) {
+      width: 75px;
+      top: 555px;
+      left: 27px;
+      z-index: 5000;
+      animation-duration: 8s;
+      animation-direction: reverse;
+    }
+
+    &:nth-child(5) {
+      width: 34px;
+      top: 213px;
+      left: 80px;
+      animation-duration: 3.5s;
+      animation-direction: reverse;
+    }
+
+    &:nth-child(6) {
+      width: 113px;
+      top: 318px;
+      left: 189px;
+      animation-duration: 5.5s;
+    }
+
+    &:nth-child(7) {
+      width: 38px;
+      top: 70px;
+      left: 200px;
+      animation-duration: 4s;
+      animation-direction: reverse;
+    }
+
+    &:nth-child(8) {
+      width: 33px;
+      top: 455px;
+      left: 13px;
+      animation-duration: 3.5s;
+    }
+
+    &:nth-child(9) {
+      width: 245px;
+      height: 690px;
+      top: 80px;
+      left: 52px;
+      z-index: 4000;
+    }
+  }
+
+  &__title {
+    padding-left: 290px;
+    font-size: 26px;
+    letter-spacing: 3px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  &__brand {
+    margin-bottom: 65px;
+    padding-left: 282px;
+    font-family: "Gilroy", sans-serif;
+    font-size: 100px;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 165px;
+  }
+
+  &__block_left {
+    width: 415px;
+    height: 265px;
+    position: relative;
+    margin-right: 50px;
+    padding: 47px 50px 72px 127px;
+    background-color: #ffffff;
+    border-radius: $border-radius;
+    box-shadow: 0 0 100px 20px rgba(#9db9c6, 0.2);
+  }
+
+  &__image_left {
+    width: 71px;
+    position: absolute;
+    top: -34px;
+    left: 127px;
+  }
+
+  &__block_right {
+    width: 265px;
+    height: 152px;
+    padding: 47px 80px 48px 40px;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: $border-radius;
+    box-shadow: 0 0 100px 20px rgba(#9db9c6, 0.2);
+  }
+
+  &__image_right {
+    width: 70px;
+    position: absolute;
+    top: -28px;
+    left: 40px;
+  }
+
+  &__text_right {
+    margin-bottom: 80px;
+  }
+
+  .btn-details {
+    width: 260px;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    padding-left: 39px;
+    background-color: $pink-main;
+    border: none;
+    border-radius: 80px;
+    z-index: 100;
+
+    &__icon {
+      height: 12px;
+      margin-right: 36px;
+      z-index: 200;
+    }
+
+    &__text {
+      font-family: "DIN Pro", sans-serif;
+      font-size: 28px;
+      text-align: left;
+      letter-spacing: 1px;
+    }
+
+    &:before {
+      content: '';
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      background-color: $black-color-main;
+      border-radius: 50%;
+      box-shadow: 2px 1px 3px 1px rgba(256, 250, 250, 0.2),
+      2px 2px 3px 0 rgba(256, 250, 250, 0.5),
+      -1px -1px 3px 1px rgba(0, 0, 0, 0.5),
+      -2px -2px 3px 1px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  @keyframes bubbles {
+    0% {
+      transform: translate(0, 0);
+    }
+    45% {
+      transform: translate(10%, -30%);
+    }
+    65% {
+      transform: translate(25%, -10%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+}

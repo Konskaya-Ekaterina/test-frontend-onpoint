@@ -1,0 +1,147 @@
+@import "../../assets/styles/variables";
+
+.popup-details {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(#16273e, 0.6);
+  animation: show-popup 0.2s forwards;
+  z-index: 5000;
+
+  &_hidden {
+    animation: hide-popup 0.2s forwards;
+  }
+
+  &__btn-close {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    background-image: url("../../assets/images/btn-close.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    z-index: 99999;
+  }
+
+  &__box {
+    width: 824px;
+    height: 574px;
+    position: absolute;
+    top: 108px;
+    left: 143px;
+    padding: 57px 132px 92px 219px;
+    background-color: #ffffff;
+    border-radius: $border-radius;
+  }
+
+  &__title {
+    font-size: 26px;
+    letter-spacing: 3px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  &__brand {
+    position: relative;
+    left: -8px;
+    margin-bottom: 22px;
+    font-family: "Gilroy", sans-serif;
+    font-size: 100px;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    margin-bottom: 17px;
+  }
+
+  &__number {
+    margin-bottom: 5px;
+    font-family: "Gilroy", sans-serif;
+    color: #78d4ff;
+    font-weight: 800;
+  }
+
+  &__paginator {
+    position: absolute;
+    bottom: 16px;
+    left: 220px;
+    display: flex;
+    align-items: center;
+    column-gap: 21px;
+  }
+
+  &__btn-left {
+    width: 10px;
+    height: 15px;
+    background-image: url("../../assets/images/3-btn-prev.png");
+    background-repeat: no-repeat;
+    background-size: 10px 15px;
+    background-position: 0;
+  }
+
+  &__point, &__point-empty {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  &__point {
+    background-color: $pink-main;
+  }
+
+  &__point-empty {
+    border: 1px solid $black-color-main;
+  }
+
+  &__btn-right {
+    width: 10px;
+    height: 15px;
+    background-image: url("../../assets/images/3-btn-next.png");
+    background-repeat: no-repeat;
+    background-size: 10px 15px;
+    background-position: 0;
+  }
+
+  @keyframes show-popup {
+    0% {
+      display: none;
+      opacity: 0;
+    }
+    80% {
+      display: none;
+      opacity: 1;
+    }
+    100% {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  @keyframes hide-popup {
+    0% {
+      display: block;
+      opacity: 1;
+    }
+    80% {
+      display: block;
+      opacity: 0;
+    }
+    100% {
+      display: none;
+      opacity: 0;
+    }
+  }
+
+  @keyframes change-page {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+}
