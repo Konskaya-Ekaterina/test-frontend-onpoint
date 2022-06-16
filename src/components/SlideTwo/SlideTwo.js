@@ -1,5 +1,10 @@
 import './SlideTwo.scss';
 import {useState} from "react";
+import imageOne from '../../assets/images/2-image-1.png'
+import imageTwo from '../../assets/images/2-image-2.png'
+import imageThree from '../../assets/images/2-image-3.png'
+import imageFour from '../../assets/images/2-image-4.png'
+import imageFive from '../../assets/images/2-image-5.png'
 
 function SlideTwo(props) {
   let [sliderPosition, setSliderPosition] = useState(0)
@@ -17,11 +22,11 @@ function SlideTwo(props) {
       <div className="slide-two">
         <div className="container">
           <div className={props.slideTwoAnimation ? 'slide-two__images_animated' : 'slide-two__images'}>
-            <img src={require('../../assets/images/2-image-1.png')} alt="1" className="slide-two__image"/>
-            <img src={require('../../assets/images/2-image-2.png')} alt="2" className="slide-two__image"/>
-            <img src={require('../../assets/images/2-image-3.png')} alt="3" className="slide-two__image"/>
-            <img src={require('../../assets/images/2-image-4.png')} alt="4" className="slide-two__image"/>
-            <img src={require('../../assets/images/2-image-5.png')} alt="5" className="slide-two__image"/>
+            <img src={imageOne} alt="1" className="slide-two__image"/>
+            <img src={imageTwo} alt="2" className="slide-two__image"/>
+            <img src={imageThree} alt="3" className="slide-two__image"/>
+            <img src={imageFour} alt="4" className="slide-two__image"/>
+            <img src={imageFive} alt="5" className="slide-two__image"/>
           </div>
           <div className="slide-two__title">текст<br/> сообщения</div>
           <div className="slide-two__main">
